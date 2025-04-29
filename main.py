@@ -59,6 +59,40 @@ for id_insertado2 in result_list2.inserted_ids:
 
 #actualizar documento
 colection1.update_one(
-    {"name": "Naskde"},
-    {"$set": {"address": "Las Americas 123"}}
+    {"name": "Juan Pérez"},
+    {"$set": {"age": 22}}
+)
+
+colection1.update_one(
+    {"name": "María González"},
+    {"$set": {"age": 23}}
+)
+
+colection1.update_one(
+    {"name": "Carlos Sánchez"},
+    {"$set": {"age": 21}}
+)
+
+colection1.update_one(
+    {"name": "Ana López"},
+    {"$set": {"age": 24}}
+)
+
+colection1.update_one(
+    {"name": "Luis Rodríguez"},
+    {"$set": {"age": 25}}
+)
+
+#eliminar un documento
+colection2.update_one(
+    {"nombre": "Carlos Mendoza"},
+    {"$unset": {"gmail": ""}}
+)
+colection2.update_one(
+    {"nombre": "Luisa Sánchez"},
+    {"$unset": {"gmail": ""}}
+)
+colection2.update_one(
+    {"nombre": "Juan Rodríguez"},
+    {"$unset": {"gmail": ""}}
 )
